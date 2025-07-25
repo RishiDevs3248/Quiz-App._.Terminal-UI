@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Intel One Mono';
+}
+
+#UI {
+    /* background-color: blue; */
+    height: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+#terminal {
+    height: fit-content;
+    width: 100%;
+    background-color: #202A38;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#top_terminal_section {
+    background-color: #202A38;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#top_terminal_section_child {
+    margin: 13px;
+    height: 50%;
+    width: calc(100% - 26px);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.circle {
+    height: 11px;
+    ;
+    width: 11px;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: #EF4246;
+}
+
+#yellow {
+    background-color: #E9B706;
+}
+
+#green {
+    background-color: #1EC762;
+}
+
+#terminal_logo {
+    color: #6DBA98;
+}
+
+/* font family remaning */
+#top_terminal_section_text {
+    color: white;
+    font-size: 15px;
+}
+
+/* terminal body */
+#bottom_terminal_section {
+    background-color: #000000;
+    height: fit-content;
+    /* height: calc( 100% - 43px ); */
+    border: 1px solid #424758;
+    border-top: 2px solid #424758;
+    border-radius: 0px 0px 11px 11px;
+    overflow: hidden;
+
+    color: white;
+
+}
+
+.parent_folder_image {
+    margin-left: 50px;
+    margin-top: 30px;
+    width: calc(100% - 100px);
+    position: relative;
+    display: flex;
+    color: #60A5FA;
+    /* #BFA240 */
+}
+
+.image_div {
+    margin-left: 10px;
+    width: 26px;
+}
+
+.folder_image {
+    position: absolute;
+    /* background-color: red; */
+    color: white;
+    height: 25px;
+    width: 25px;
+}
+
+.image_div_text {
+    /* color: #FCC419; */
+    color: #FACC14;
+}
+
+.dollar_sign {
+    margin-left: 10px;
+    color: #9CA3AF
+}
+
+/* Three Texts */
+
+.three_text {
+    margin-left: 25px;
+    margin-top: 5px;
+    color: #9CA3AF;
+}
+
+#text_4 {
+    color: #49DE80;
+}
+
+
+/* QUESTION */
+#Question_parent {
+    margin: 25px;
+    padding: 10px;
+    padding-left: 18px;
+    /* background-color: orange; */
+    background-color: #1a212d;
+    border-left: 2px solid #60A5FA;
+}
+
+#Question_no {
+    margin-top: 10px;
+    color: #24D3EE;
+    padding-bottom: 10px;
+}
+
+#Que_text {
+    margin-bottom: 10px;
+}
+
+/* fourth text */
+#text_5 {
+    color: #FACC14;
+}
+
+/* options */
+.options {
+    margin-left: 50px;
+    margin-top: 20px;
+    color: #6B7280;
+}
+
+.option_arrow {
+    color: #292f3b;
+}
+
+#opt_1 {
+    color: #D1D5DB;
+}
+
+#opt_2 {
+    color: #D1D5DB;
+}
+
+#opt_3 {
+    color: #D1D5DB;
+}
+
+#opt_4 {
+    color: #D1D5DB;
+}
+
+/* second path for selected option */
+#sec_nd_path {
+    margin-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    border-top: 1px solid #374151;
+    width: calc(100% - 75px);
+}
+
+/* bottom buttons */
+#bottom_buttons {
+    margin-top: 30px;
+    /* background-color: orange; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+#execute_comm_btn {
+    background-color: #105225;
+    border: #105225;
+    font-weight: 600;
+}
+
+#Previous_btn {
+    background-color: #1F2937;
+    border: 1px solid #4B5563;
+    color: #49DE80;
+    font-weight: 600;
+}
+
+/* status */
+#parent_status {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0px;
+}
+
+#status_id {
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    color: #49DE80;
+    font-size: 12px;
+}
+
+#circle{
+    height: 7px;
+    width: 7px;
+    background-color: #49DE80;
+    border-radius: 50%;
+}
+
+#status_id_progress{
+    color: #60A5FA;
+}
+
+#path_line{
+    color: #9CA3AF;
+    font-size: 12px;
+    align-self: center;
+    padding-right: 10px;
+}
