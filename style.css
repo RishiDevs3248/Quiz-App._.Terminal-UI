@@ -150,8 +150,12 @@ body {
     padding-bottom: 10px;
 }
 
+#que_line{
+    display: flex;
+}
+
 #Que_text {
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
 
 /* fourth text */
@@ -161,13 +165,14 @@ body {
 
 /* options */
 .options {
-    margin-left: 50px;
+    margin-left: 25px;
     margin-top: 20px;
+    padding-left: 25px;
     color: #6B7280;
 }
 
 .option_arrow {
-    color: #292f3b;
+    color: #444b59;
 }
 
 #opt_1 {
@@ -184,6 +189,26 @@ body {
 
 #opt_4 {
     color: #D1D5DB;
+}
+
+#isSelected1{
+    color:#1EC762;
+    display: none;
+}
+
+#isSelected2{
+    color:#1EC762;
+    display: none;
+}
+
+#isSelected3{
+    color:#1EC762;
+    display: none;
+}
+
+#isSelected4{
+    color:#1EC762;
+    display: none;
 }
 
 /* second path for selected option */
@@ -261,3 +286,116 @@ body {
     align-self: center;
     padding-right: 10px;
 }
+
+
+
+
+.selected{
+    background-color: #08190E;
+    border-left: 2px solid #1EC762;
+}
+
+.selected #opt_1{
+    color:#1EC762;
+}
+
+.selected #isSelected1{
+    display: inline;
+}
+
+.selected #opt_2{
+    color:#1EC762;
+}
+
+.selected #isSelected2{
+    display: inline;
+}
+
+.selected #opt_3{
+    color:#1EC762;
+}
+
+.selected #isSelected3{
+    display: inline;
+}
+
+.selected #opt_4{
+    color:#1EC762;
+}
+
+.selected #isSelected4{
+    display: inline;
+}
+
+#Selected_opt{
+    color: #1EC762;
+    margin-left: 10px;
+}
+
+
+#pulseAni{
+    background-color: #1EC762;
+    width: 10px;
+    height: 20px;
+    animation: pulse 1.5s infinite;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    margin-left: 10px;
+}
+
+#pulseAni_child{
+    position: absolute;
+    bottom: 2px;
+    background-color: black;
+    width: 10px;
+    height: 13px;
+}
+
+@keyframes pulse{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+#pulseAni2{
+    position: relative;
+    background-color: #1EC762;
+    width: 10px;
+    height: 20px;
+    animation: pulse2 0.8s steps(1, end) infinite;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#pulseAni_child2{
+    position: absolute;
+    bottom: 0px;
+    background-color: #1a212d;
+    width: 10px;
+    height: 17px;
+}
+
+@keyframes pulse2{
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

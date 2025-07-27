@@ -67,7 +67,15 @@
                 <!-- Question -->
                 <div id="Question_parent">
                     <div id="Question_no">[QUESTION #<span id="Que_no2"></span>]</div>
-                    <div id="Que_text">WHAT IS HTML,CSS,JS</div>
+                    <div id="que_line">
+                        <div id="Que_text"></div>
+                        <div id="pulseAni2">
+                            <div id="pulseAni_child2">
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
 
@@ -78,10 +86,14 @@
 
 
                 <!-- options -->
-                <div id="option1" class="options">[A]<span class="option_arrow"> > </span><span id="opt_1">jkddsndff</span></div>
-                <div id="option2" class="options">[B]<span class="option_arrow"> > </span><span id="opt_2">jkddsndff</span></div>
-                <div id="option3" class="options">[C]<span class="option_arrow"> > </span><span id="opt_3">jkddsndff</span></div>
-                <div id="option4" class="options">[D]<span class="option_arrow"> > </span><span id="opt_4">jkddsndff</span></div>
+                <div id="option1" class="options" data-value="A">[A]<span class="option_arrow"> > </span><span
+                        id="opt_1"></span><span id="isSelected1"> ⬅︎ SELECTED</span></div>
+                <div id="option2" class="options" data-value="B">[B]<span class="option_arrow"> > </span><span
+                        id="opt_2"></span><span id="isSelected2"> ⬅︎ SELECTED</span></div>
+                <div id="option3" class="options" data-value="C">[C]<span class="option_arrow"> > </span><span
+                        id="opt_3"></span><span id="isSelected3"> ⬅︎ SELECTED</span></div>
+                <div id="option4" class="options" data-value="D">[D]<span class="option_arrow"> > </span><span
+                        id="opt_4"></span><span id="isSelected4"> ⬅︎ SELECTED</span></div>
 
                 <div class="parent_folder_image" id="sec_nd_path">
                     <div>
@@ -94,7 +106,15 @@
                         ~/frontend-assessment
                     </div>
                     <div class="dollar_sign">
-                        $ submit-answer 
+                        $ submit-answer
+                    </div>
+                    <div id="Selected_opt">
+
+                    </div>
+                    <div id="pulseAni">
+                        <div id="pulseAni_child">
+
+                        </div>
                     </div>
                 </div>
 
@@ -102,8 +122,9 @@
         </div>
 
         <div id="bottom_buttons">
-            <button onclick="handleClickPrev()" class="button" id="Previous_btn"> < Previous</button>
-            <button onclick="handleClicknext()" class="button" id="execute_comm_btn">Execute Command > </button>
+            <button onclick="handleClickPrev()" class="button" id="Previous_btn">
+                < Previous</button>
+                    <button onclick="handleClicknext()" class="button" id="execute_comm_btn">Execute Command > </button>
         </div>
 
         <!-- status  -->
