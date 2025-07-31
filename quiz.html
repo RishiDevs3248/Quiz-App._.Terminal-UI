@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
+<html>
 
 <head>
     <title>
         Quiz App
     </title>
     <!-- Css -->
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Js -->
+    <script src="script.js" defer></script>
+
     <!-- fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap');
     </style>
 </head>
+<!-- Html -->
 
 <body>
     <div id="UI">
+
         <div id="terminal">
 
 
@@ -31,6 +36,7 @@
                         quiz-terminal - bash - 80×24
                     </div>
                 </div>
+                <div class="countdown">00 : 00</div>
             </div>
 
 
@@ -47,12 +53,12 @@
                         ~/frontend-assessment
                     </div>
                     <div class="dollar_sign">
-                        $ cat welcome.txt
+                        $
                     </div>
                 </div>
 
                 <!-- three text -->
-                <!-- <div id="text_2" class="three_text">
+                <div id="text_2" class="three_text">
                     > Starting frontend developer assessment ...
                 </div>
                 <div id="text_3" class="three_text">
@@ -60,26 +66,19 @@
                 </div>
                 <div id="text_4" class="three_text">
                     > Ready! Type your answer below.
-                </div> -->
-
-                <!-- ASCII Art Banner -->
-                <div class="ascii-banner">
-                    <pre class="ascii-art">
-████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗           ██████╗ ██╗   ██╗██╗███████╗
-╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║          ██╔═══██╗██║   ██║██║╚══███╔╝
-   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║          ██║   ██║██║   ██║██║  ███╔╝ 
-   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║          ██║▄▄ ██║██║   ██║██║ ███╔╝  
-   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗     ╚██████╔╝╚██████╔╝██║███████╗
-   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝      ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
-                </pre>
                 </div>
+
 
                 <!-- Question -->
                 <div id="Question_parent">
-                    <div class="welcome-section">
-                        <div class="info-line success">[INFO] Welcome to Terminal Quiz - Frontend Developer Assessment
+                    <div id="Question_no">[QUESTION #<span id="Que_no2"></span>]</div>
+                    <div id="que_line">
+                        <div id="Que_text"></div>
+                        <div id="pulseAni2">
+                            <div id="pulseAni_child2">
+
+                            </div>
                         </div>
-                        <div class="info-line warning">[STATUS] Ready to test your frontend development skills</div>
                     </div>
 
                 </div>
@@ -91,12 +90,15 @@
                 </div>
 
 
-                <a id="underline" href="./quiz.html">
-                    <div class="command-option">
-                        <span class="cmd-name">./quiz start</span>
-                        <span class="cmd-desc">Click to start the frontend assessment</span>
-                    </div>
-                </a>
+                <!-- options -->
+                <div id="option1" class="options" data-value="A">[A]<span class="option_arrow"> > </span><span
+                        id="opt_1"></span><span id="isSelected1"> ⬅︎ SELECTED</span></div>
+                <div id="option2" class="options" data-value="B">[B]<span class="option_arrow"> > </span><span
+                        id="opt_2"></span><span id="isSelected2"> ⬅︎ SELECTED</span></div>
+                <div id="option3" class="options" data-value="C">[C]<span class="option_arrow"> > </span><span
+                        id="opt_3"></span><span id="isSelected3"> ⬅︎ SELECTED</span></div>
+                <div id="option4" class="options" data-value="D">[D]<span class="option_arrow"> > </span><span
+                        id="opt_4"></span><span id="isSelected4"> ⬅︎ SELECTED</span></div>
 
                 <div class="parent_folder_image" id="sec_nd_path">
                     <div>
@@ -124,18 +126,24 @@
             </div>
         </div>
 
-
-    </div>
-    <!-- status  -->
-    <div id="parent_status">
-        <div id="status_id">
-            <div id="circle"></div>
-            <div>ONLINE</div>
-        </div>
-        <div id="path_line">
-            Ln 3, Col 1
+        <div id="bottom_buttons">
+            <button onclick="handleClickPrev()" class="button" id="Previous_btn">
+                < Previous</button>
+                    <button onclick="handleClicknext()" class="button" id="execute_comm_btn">Execute Command > </button>
         </div>
     </div>
+     <!-- status  -->
+        <div id="parent_status">
+            <div id="status_id">
+                <div id="circle"></div>
+                <div>ONLINE</div>
+                <div id="status_id_progress">Progress : <span id="custum_prog">00</span>%</div>
+                <div id="status_id_points">Points : <span id="custum_points">00</span></div>
+            </div>
+            <div id="path_line">
+                Ln 3, Col 1
+            </div>
+        </div>
 </body>
 
 </html>

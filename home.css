@@ -25,6 +25,7 @@ body {
     width: 100%;
     background-color: #202A38;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 #top_terminal_section {
@@ -33,8 +34,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
+    /* justify-content: center; */
     align-items: center;
-    border-radius: 10px 10px 0px 0px;
 }
 
 #top_terminal_section_child {
@@ -85,12 +86,14 @@ body {
 /* terminal body */
 #bottom_terminal_section {
     background-color: #000000;
-    height: fit-content;
+    min-height: 500px;
+    height: auto;
+
     /* height: calc( 100% - 43px ); */
     border: 1px solid #424758;
     border-top: 2px solid #424758;
     border-radius: 0px 0px 11px 11px;
-    /* overflow: hidden; */
+    overflow: hidden;
 
     color: white;
 
@@ -229,34 +232,6 @@ body {
     width: calc(100% - 75px);
 }
 
-/* bottom buttons */
-#bottom_buttons {
-    margin-top: 30px;
-    /* background-color: orange; */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.button {
-    margin-bottom: 50px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
-}
-
-#execute_comm_btn {
-    background-color: #105225;
-    border: #105225;
-    font-weight: 600;
-}
-
-#Previous_btn {
-    background-color: #1F2937;
-    border: 1px solid #4B5563;
-    color: #49DE80;
-    font-weight: 600;
-}
-
 /* status */
 #parent_status {
     width: 70%;
@@ -286,60 +261,11 @@ body {
     border-radius: 50%;
 }
 
-#status_id_progress{
-    color: #60A5FA;
-}
-
 #path_line{
     color: #9CA3AF;
     font-size: 12px;
     align-self: center;
     padding-right: 10px;
-}
-
-
-
-
-.selected{
-    background-color: #08190E;
-    border-left: 2px solid #1EC762;
-}
-
-.selected #opt_1{
-    color:#1EC762;
-}
-
-.selected #isSelected1{
-    display: inline;
-}
-
-.selected #opt_2{
-    color:#1EC762;
-}
-
-.selected #isSelected2{
-    display: inline;
-}
-
-.selected #opt_3{
-    color:#1EC762;
-}
-
-.selected #isSelected3{
-    display: inline;
-}
-
-.selected #opt_4{
-    color:#1EC762;
-}
-
-.selected #isSelected4{
-    display: inline;
-}
-
-#Selected_opt{
-    color: #1EC762;
-    margin-left: 10px;
 }
 
 
@@ -384,9 +310,6 @@ body {
     width: 10px;
     height: 20px;
     animation: pulse2 0.8s steps(1, end) infinite;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 #pulseAni_child2{
@@ -409,3 +332,70 @@ body {
     }
 }
 
+.success{
+    color: #49DE80;
+}
+
+.warning{
+    color: #FACC14;
+}
+
+
+
+/* ASCII Banner */
+.ascii-banner {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.ascii-art {
+    color: #00ff00;
+    font-size: 10px;
+    line-height: 1.1;
+    text-shadow: 0 0 10px #00ff00;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00ff00;
+    }
+
+    to {
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+}
+
+
+
+#underline {
+    text-decoration: none;
+}
+
+
+.command-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 12px;
+    padding-left: 50px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.command-option:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.cmd-name {
+    color: #00ff00;
+    font-weight: bold;
+    width: 200px;
+}
+
+.cmd-desc {
+    color: #ccc;
+}

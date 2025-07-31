@@ -70,7 +70,7 @@ const options = document.querySelectorAll(".options");
 const Selected_option = document.getElementById("Selected_opt")
 
 const countDown = document.querySelector('.countdown');
-let countDownTime = 10000; // 90 second
+let countDownTime = 90000; // 90 second
 let intervalId;
 
 let queno = document.querySelector("#Que_no")
@@ -174,13 +174,6 @@ function handleClickPrev() {
 
 
 // -------------- timer 
-
-
-
-
-
-
-
 function timer(countDownTime) {
 
         intervalId = setInterval(() => {
