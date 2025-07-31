@@ -69,6 +69,9 @@ let i = 0;
 const options = document.querySelectorAll(".options");
 const Selected_option = document.getElementById("Selected_opt")
 
+const countDown = document.querySelector('.countdown');
+let countDownTime = 10000; // 90 second
+let intervalId;
 
 let queno = document.querySelector("#Que_no")
 let queno2 = document.querySelector("#Que_no2")
@@ -84,7 +87,7 @@ let Curr_que;
 let points = document.getElementById("custum_points")
 
 options.forEach(option => {
-    
+
     option.addEventListener("click", () => {
         options.forEach(opt => opt.classList.remove("selected"));
         option.classList.add("selected");
@@ -135,33 +138,75 @@ function handleOptionsque() {
 handleOptionsque()
 
 function handleClicknext() {
-    Curr_que = arr[i%n];
+    Curr_que = arr[i % n];
     i++;
 
     handleOptionsque()
-    console.log( "IF condition : "+Curr_que.options[x] == Curr_que.ans )
+    console.log("IF condition : " + Curr_que.options[x] == Curr_que.ans)
     console.log(Curr_que)
     console.log(Curr_que.options[x])
     console.log(Curr_que.ans)
-    if(Curr_que.options[x] == Curr_que.ans){
+    if (Curr_que.options[x] == Curr_que.ans) {
         let prevPoints = Number(points.innerText)
-        points.innerText = prevPoints+=5
+        points.innerText = prevPoints += 5
 
     }
     options.forEach(opt => opt.classList.remove("selected"));
     Selected_option.innerText = ""
-
+    clearInterval(intervalId);
+    timer(countDownTime)
 }
 
 function handleClickPrev() {
-    Curr_que = arr[i%n];
+    Curr_que = arr[i % n];
     i--;
     handleOptionsque()
     options.forEach(opt => opt.classList.remove("selected"));
     Selected_option.innerText = ""
-
+    clearInterval(intervalId);
+    timer(countDownTime)
 }
 
 
 
 
+
+
+
+// -------------- timer 
+
+
+
+
+
+
+
+function timer(countDownTime) {
+
+        intervalId = setInterval(() => {
+        console.log(countDownTime)
+        countDownTime -= 1000
+
+        const secondsLeft = Math.round(countDownTime / 1000);
+        let minutes = Math.floor(secondsLeft / 60);
+        let seconds = secondsLeft % 60;
+
+       
+        if (minutes < 10) {
+            minutes = `0${minutes}`;
+        }
+        if (seconds < 10) {
+            seconds = `0${seconds}`;
+        }
+        countDown.innerHTML = `${minutes} : ${seconds}`;
+
+        if (countDownTime <= 0) {
+            clearInterval(intervalId);
+            // console.log("Countdown complete!");
+            handleClicknext()
+        }
+
+    }, 1000)
+
+}
+timer(countDownTime)
